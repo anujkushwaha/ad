@@ -1,0 +1,150 @@
+.menu-area
+{
+    background: #eee;
+}
+
+.navbar{
+    padding: 0% ;
+}
+
+.mainmenu a, .navbar-default .navbar-nav > li > a, .mainmenu ul li a ,  .navbar-nav .nav-link
+{
+    color:black;
+    font-size:12px;
+    font-style: bold;
+    text-transform:capitalize;
+    padding:7px 7px;
+    font-family:'Roboto',sans-serif;display: block !important;
+}
+
+.mainmenu .active a,.mainmenu .active a:focus,.mainmenu .active a:hover,.mainmenu li a:hover,.mainmenu li a:focus ,.navbar-default .navbar-nav>.show>a, .navbar-default .navbar-nav>.show>a:focus, .navbar-default .navbar-nav>.show>a:hover{color: black;;outline: 0;}
+
+@media only screen and (min-width: 100px) 
+{
+    .mainmenu .collapse ul li:hover> ul{display:block}
+    .mainmenu .collapse ul ul{position:absolute;top:100%;left:0;min-width:100px;display:none}
+    /*******/
+    .mainmenu .collapse ul ul li{position:relative}
+    .mainmenu .collapse ul ul li:hover> ul{display:block}
+    .mainmenu .collapse ul ul ul{position:absolute;top:0;left:100%;min-width:100px;display:none}
+    /*******/
+    .mainmenu .collapse ul ul ul li{position:relative}
+    .mainmenu .collapse ul ul ul li:hover ul{display:block}
+    .mainmenu .collapse ul ul ul ul{position:absolute;top:0;left:-100%;min-width:100px;display:none;z-index:1}
+}
+
+@media only screen and (max-width: 100px)
+{
+    .navbar-nav .show .dropdown-menu .dropdown-menu > li > a{padding:16px 15px 16px 35px}
+    .navbar-nav .show .dropdown-menu .dropdown-menu .dropdown-menu > li > a{padding:16px 15px 16px 45px}
+}
+
+.third-level-menu
+{
+    position: absolute;
+    top: 0;
+    right: -150px;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    display: none;
+    border: 1px solid #d0d0d0;
+    border-radius:4px;
+    background-color:white; 
+}
+
+.third-level-menu > li
+{
+    position: relative;
+    height: 30px;
+    background:white;
+    padding: 2px;
+}
+
+.third-level-menu1:hover 
+{ 
+    background: #eee;     
+    height: 25px; 
+}
+
+.third-level-menu1{
+    padding: 10px 10px 20px 10px;
+}
+
+.second-level-menu
+{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 200px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    background-color:white;  
+}
+
+.second-level-menu > li
+{
+    position: relative;
+    height: 40px;
+    background:white;
+    padding: 10px;
+}
+
+.second-level-menu1:hover{
+    background: #eee;
+    height: 25px; 
+}
+
+.second-level-menu1{
+    padding: 10px 10px 20px 10px; // TRBL
+}
+
+.top-level-menu
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-level-menu > li
+{
+    position: relative;
+    float: left;
+}
+
+.top-level-menu1:hover 
+{ 
+    background:rgb(160, 152, 152);
+}
+
+.top-level-menu li:hover > ul
+{
+    /* On hover, display the next level's menu */
+    display: inline-block;
+}
+
+/* Menu Link Styles */
+
+.top-level-menu a /* Apply to all links inside the multi-level menu */
+{
+    text-decoration: none;
+    padding: 0 0 0 0px;
+
+    /* Make the link cover the entire list item-container */
+    display: inline-block;
+    line-height: 0px;
+}
+
+.container
+{
+    max-width: 100%;
+}
+
+nav .container{
+    width: 100% ;
+}
+
