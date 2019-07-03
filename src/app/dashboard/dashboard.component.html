@@ -14,8 +14,8 @@
             <li *ngFor="let dashboardMenu of dashboardMainMenu; let j = index">
               <div class="top-level-menu1" style="display: inline-block">
                 <a
-                  href="{{ dashboardMenu.url }}"
-                  target="_blank"
+                  href="{{ dashboardMenu.url ? dashboardMenu.url :'#' }}"
+                  target="{{ dashboardMenu.url ? '_blankl' : null }}"
                   *ngIf="dashboardMenu.Visible == 'true'"
                 >
                   {{ dashboardMenu.applicationName }}
@@ -31,8 +31,8 @@
                 <li *ngFor="let dashboardMenuArr of menuArr[j]">
                   <div class="second-level-menu1">
                     <a
-                      href="{{ dashboardMenuArr.url }}"
-                      target="_blank"
+                      href="{{ dashboardMenuArr.url ? dashboardMenuArr.url :'#' }}"
+                      target="{{ dashboardMenuArr.url ? '_blankl' : null }}"
                       *ngIf="dashboardMenuArr.Visible == 'true'"
                     >
                       {{ dashboardMenuArr.applicationName }}
