@@ -29,7 +29,7 @@
               <li
                 *ngFor="let dashboardMenu of dashboardMainMenu; let j = index"
               >
-                <div class="top-level-menu1" style="display: inline-block">
+                <div class="top-level-menu1" style="display: -webkit-inline-box">
                   <a
                     href="{{ dashboardMenu.url ? dashboardMenu.url : '#' }}"
                     target="{{ dashboardMenu.url ? '_blankl' : null }}"
@@ -56,7 +56,7 @@
                         target="{{ dashboardMenuArr.url ? '_blankl' : null }}"
                         *ngIf="dashboardMenuArr.Visible == 'true'"
                         class="referrenceOnHover"
-                        style="padding-left:10px;  "
+                        style="padding-left:10px;"
                       >
                         {{ dashboardMenuArr.applicationName }}
                         <i
@@ -83,6 +83,7 @@
                             href="{{ dashboardSubMenuArr.url }}"
                             *ngIf="dashboardSubMenuArr.applicationName"
                             class="referrenceOnHover"
+                            style="padding-left:20px; "
                           >
                             {{ dashboardSubMenuArr.applicationName }}
                           </a>
@@ -91,7 +92,15 @@
                     </ul>
                   </li>
                 </ul>
-                <span *ngIf="j <= sep">|</span>
+                <span *ngIf="j <= sep">
+                <label *ngIf="dashboardMenu.child!=null">
+                    |
+                </label>
+
+                <label *ngIf="dashboardMenu.child==null" >
+                  |
+              </label>
+                </span>
               </li>
             </ul>
           </div>

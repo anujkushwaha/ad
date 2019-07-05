@@ -24,8 +24,8 @@
 .top-level-menu
 {
     list-style: none;
-    padding-left: 15px;
-    margin-left: 0px;
+    padding-left: 10px;
+    margin-top: 10px;
 }
 
 .top-level-menu > li
@@ -51,7 +51,6 @@
 
     /* Make the link cover the entire list item-container */
     display: inline-block;
-    line-height: 0px;
 }
 
 .second-level-menu
@@ -74,7 +73,8 @@
     position: relative;
     height: 35px;
     background:white;
-    padding: 10px;
+    padding-bottom: 6px;
+    padding-top: 6px;
     font-weight: 500;
 }
 
@@ -90,8 +90,6 @@
     background: #eee;
     height: 25px; 
     color: black;
-    padding: 0 0 0 0;    
-    margin: 0px;
 }
 
 // .second-level-menu1:hover{
@@ -117,9 +115,9 @@
 .third-level-menu > li
 {
     position: relative;
-    height: 26px;
+    padding-top: 2px;
+    height: 30px;
     background:white;
-    padding: 0px;
 }
 
 // .third-level-menu1:hover 
