@@ -1,124 +1,39 @@
-.menu-area
-{
-    background: #eee;
-}
-
 .navbar{
     padding: 0% ;
 }
 
+.difuzeTitle{
+    
+    font-size: 20px;
+    font-weight: 700;
+}
+
 .mainmenu a, .navbar-default .navbar-nav > li > a, .mainmenu ul li a ,  .navbar-nav .nav-link
 {
-    color:black;
-    font-size:12px;
-    font-style: bold;
+    font-size:13px; 
     text-transform:capitalize;
-    padding:7px 7px;
+    padding:9px 9px 0px 0px;
     font-family:'Roboto',sans-serif;display: block !important;
 }
 
-.mainmenu .active a,.mainmenu .active a:focus,.mainmenu .active a:hover,.mainmenu li a:hover,.mainmenu li a:focus ,.navbar-default .navbar-nav>.show>a, .navbar-default .navbar-nav>.show>a:focus, .navbar-default .navbar-nav>.show>a:hover{color: black;;outline: 0;}
-
-@media only screen and (min-width: 100px) 
+.mainmenu .active a,.mainmenu .active a:focus,.mainmenu .active a:hover,.mainmenu li a:hover,.mainmenu li a:focus ,.navbar-default .navbar-nav>.show>a, .navbar-default .navbar-nav>.show>a:focus, .navbar-default .navbar-nav>.show>a:hover
 {
-    .mainmenu .collapse ul li:hover> ul{display:block}
-    .mainmenu .collapse ul ul{position:absolute;top:100%;left:0;min-width:100px;display:none}
-    /*******/
-    .mainmenu .collapse ul ul li{position:relative}
-    .mainmenu .collapse ul ul li:hover> ul{display:block}
-    .mainmenu .collapse ul ul ul{position:absolute;top:0;left:100%;min-width:100px;display:none}
-    /*******/
-    .mainmenu .collapse ul ul ul li{position:relative}
-    .mainmenu .collapse ul ul ul li:hover ul{display:block}
-    .mainmenu .collapse ul ul ul ul{position:absolute;top:0;left:-100%;min-width:100px;display:none;z-index:1}
-}
-
-@media only screen and (max-width: 100px)
-{
-    .navbar-nav .show .dropdown-menu .dropdown-menu > li > a{padding:16px 15px 16px 35px}
-    .navbar-nav .show .dropdown-menu .dropdown-menu .dropdown-menu > li > a{padding:16px 15px 16px 45px}
-}
-
-.third-level-menu
-{
-    position: absolute;
-    top: 0;
-    right: -150px;
-    width: 150px;
-    list-style: none;
-    padding: 0;
-    display: none;
-    border: 1px solid #d0d0d0;
-    border-radius:4px;
-    background-color:white; 
-}
-
-.third-level-menu > li
-{
-    position: relative;
-    height: 30px;
-    background:white;
-    padding: 2px;
-}
-
-.third-level-menu1:hover 
-{ 
-    background: #eee;     
-    height: 25px; 
-}
-
-.third-level-menu1{
-    padding: 10px 10px 20px 10px;
-}
-
-.second-level-menu
-{
-    position: absolute;
-    top: 20px;
-    left: 0;
-    width: 200px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-    border: 1px solid #d0d0d0;
-    border-radius: 5px;
-    background-color:white;  
-}
-
-.second-level-menu > li
-{
-    position: relative;
-    height: 40px;
-    background:white;
-    padding: 10px;
-}
-
-.second-level-menu1:hover{
-    background: #eee;
-    height: 25px; 
-}
-
-.second-level-menu1{
-    padding: 10px 10px 20px 10px; // TRBL
+  color: black;;outline: 0;
 }
 
 .top-level-menu
 {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding-left: 15px;
+    margin-left: 0px;
 }
 
 .top-level-menu > li
 {
     position: relative;
-    float: left;
-}
-
-.top-level-menu1:hover 
-{ 
-    background:rgb(160, 152, 152);
+    float: left;    
+    font-weight: 500;
+    padding-left: 15px;
 }
 
 .top-level-menu li:hover > ul
@@ -139,6 +54,85 @@
     line-height: 0px;
 }
 
+.second-level-menu
+{
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    width: 200px;
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    display: none;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    background-color:white;
+}
+
+.second-level-menu > li
+{
+    position: relative;
+    height: 35px;
+    background:white;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.second-level-menu1{
+    padding: 0px ; // TRBL
+}
+
+.referrenceOnHover{
+    color: gray ;   
+}
+
+.referrenceOnHover:hover{
+    background: #eee;
+    height: 25px; 
+    color: black;
+    padding: 0 0 0 0;    
+    margin: 0px;
+}
+
+// .second-level-menu1:hover{
+//     background: #eee;
+//     height: 25px; 
+//     color: black
+// }
+
+.third-level-menu
+{
+    position: absolute;
+    top: 0px;
+    right: -151px;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    display: none;
+    border: 1px solid #d0d0d0;
+    border-radius:5px;
+    background-color:white; 
+}
+
+.third-level-menu > li
+{
+    position: relative;
+    height: 26px;
+    background:white;
+    padding: 0px;
+}
+
+// .third-level-menu1:hover 
+// { 
+//     background: #eee;     
+//     height: 25px; 
+// }
+
+.third-level-menu1{
+    padding: 0;
+}
+
+
 .container
 {
     max-width: 100%;
@@ -148,3 +142,6 @@ nav .container{
     width: 100% ;
 }
 
+#caretRightIcon{
+   float: right;
+}
