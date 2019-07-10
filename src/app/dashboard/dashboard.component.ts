@@ -12,42 +12,49 @@ export class DashboardComponent implements OnInit {
   menuArr: MainArrayType[] = [];
   dashboardMainMenu;
   test: boolean = false;
-  sep : any;
+  sep: any = 0;
 
   title = "difuze dashborad";
 
   permissions: any[] = [
     "ET Details View",
+    "ET Details Edit",
     "ET Search",
     "ET Location",
     "ET Template View",
+    "ET Template Edit",
     "User Permission View",
+    "User Permission Edit",
     "WF View",
-    "WF Operator",
-    "Notification View",
-    "TM Admin",
-    "TM View",
-    "Title View",
-    "TS Admin",
-    "TS View",
-    "TS Operator",
-    "CDN View",
-    "Folder View",
-    "QueryViewer",
-    "Metadata View",
-    "Metadata Model Admin",
-    "Metadata Admin",
-    "Bulk Order Operator",
-    "Bulk Order Admin",
-    "notify",
-    "bop",
-    "abc1",
-    "abc2",
-    "abc3",
-    "abc4",
-    "abc5",
-    "abc6",
-    "abc7",
+    "WF Template Edit",
+      "WF Operator",
+      "Notification View",
+      "Notification Edit",
+      "TM Admin",
+      "TM View",
+      "Title View",
+      "Title Edit",
+      "TS Admin",
+      "TS View",
+      "TS Operator",
+      "CDN View",
+      "Folder View",
+      "Folder Edit",
+      "QueryViewer",
+      "Metadata View",
+      "Metadata Model Admin",
+      "Metadata Admin",
+      "Bulk Order Operator",
+      "Bulk Order Admin",
+      "notify",
+      "bop",
+      "abc1",
+      "abc2",
+      "abc3",
+      "abc4",
+      "abc5",
+      "abc6",
+      "abc7",
     "abc8",
     "abc9",
     "abc10",
@@ -77,15 +84,22 @@ export class DashboardComponent implements OnInit {
             schild.Visible = "true";
           }
         }
+
+        // this.dashboardMainMenu.forEach(element => {
+        //   if (element.Visible == "true") {
+        //     this.sep++;
+        //   }
+        // });
+
+        // this.sep = this.sep - 2;
+        // console.log(this.sep);
       },
 
       (err: HttpErrorResponse) => {
         console.log(err.message);
       },
 
-      () => {
-        
-      }
+      () => {}
     );
   }
 }

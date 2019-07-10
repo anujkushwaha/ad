@@ -1,5 +1,7 @@
 <div>
-  <nav style="background-color: #f8f8f8; border-bottom: 1px solid #d0d0d0; padding: 7px 15px 7px 15px;">
+  <nav
+    style="background-color: #f8f8f8; border-bottom: 1px solid #d0d0d0; padding: 7px 15px 7px 15px;"
+  >
     <table style="width: 100%">
       <tbody>
         <tr>
@@ -20,21 +22,29 @@
       </tbody>
     </table>
   </nav>
-  <nav id="menu_area" style="background-color: #f8f8f8; border-bottom: 1px solid #d0d0d0; padding: -15px; font-weight: 500; font-size: smaller;">
+  <nav
+    id="menu_area"
+    style="background-color: #f8f8f8; border-bottom: 1px solid #d0d0d0; padding: -15px; font-weight: 500; font-size: smaller;"
+  >
     <div class="container">
       <div class="row">
         <nav class="navbar navbar-light navbar-expand mainmenu lg-new">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="top-level-menu">
-              <li
-                *ngFor="let dashboardMenu of dashboardMainMenu; let j = index"
-              >
-                <div class="top-level-menu1" style="display: -webkit-inline-box">
+          <div
+            class="collapse navbar-collapse"
+            id="navbarSupportedContent"
+            *ngFor="let dashboardMenu of dashboardMainMenu; let j = index"
+          >
+            <ul class="top-level-menu" *ngIf="dashboardMenu.Visible == 'true'">
+              <li>
+                <div
+                  class="top-level-menu1"
+                  style="display: -webkit-inline-box; padding-bottom: 6px;"
+                >
                   <a
                     href="{{ dashboardMenu.url ? dashboardMenu.url : '#' }}"
                     target="{{ dashboardMenu.url ? '_blankl' : null }}"
                     *ngIf="dashboardMenu.Visible == 'true'"
-                    class="referrenceOnHover"
+                    class="referrenceOnHoverTopMenu"
                   >
                     {{ dashboardMenu.applicationName }}
                     <i
@@ -45,62 +55,61 @@
                     ></i>
                   </a>
                 </div>
-
                 <ul class="second-level-menu" *ngIf="menuArr[j]">
-                  <li *ngFor="let dashboardMenuArr of menuArr[j]">
-                    <div class="second-level-menu1">
-                      <a
-                        href="{{
-                          dashboardMenuArr.url ? dashboardMenuArr.url : '#'
-                        }}"
-                        target="{{ dashboardMenuArr.url ? '_blankl' : null }}"
-                        *ngIf="dashboardMenuArr.Visible == 'true'"
-                        class="referrenceOnHover"
-                        style="padding-left:10px;"
-                      >
-                        {{ dashboardMenuArr.applicationName }}
-                        <i
-                          class="fa fa-caret-right"
-                          *ngIf="dashboardMenuArr.subMenuIcon"
-                          id="caretRightIcon"
-                          aria-hidden="true"
-                        ></i>
-                      </a>
-                    </div>
+                  <div *ngFor="let dashboardMenuArr of menuArr[j]">
+                    <li class="dropright" *ngIf="dashboardMenuArr.Visible == 'true'">
+                      <div class="second-level-menu1">
+                        <a
+                          href="{{
+                            dashboardMenuArr.url ? dashboardMenuArr.url : '#'
+                          }}"
+                          target="{{ dashboardMenuArr.url ? '_blankl' : null }}"
+                          class="referrenceOnHover"
+                          style="padding-left:10px; padding-top: 2px"
+                        >
+                          {{ dashboardMenuArr.applicationName }}
+                          <i
+                            class="fa fa-caret-right"
+                            *ngIf="dashboardMenuArr.subMenuIcon"
+                            id="caretRightIcon"
+                            aria-hidden="true"
+                          ></i>
+                        </a>
+                      </div>
 
-                    <ul
-                      class="third-level-menu"
-                      *ngIf="dashboardMenuArr.subchild != 0"
-                    >
-                      <li
-                        *ngFor="
-                          let dashboardSubMenuArr of dashboardMenuArr.subchild
-                        "
+                      <ul
+                        class="third-level-menu"
+                        *ngIf="dashboardMenuArr.subchild != 0"
                       >
-                        <div class="third-level-menu1">
-                          <a
-                            target="_blank"
-                            href="{{ dashboardSubMenuArr.url }}"
-                            *ngIf="dashboardSubMenuArr.applicationName"
-                            class="referrenceOnHover"
-                            style="padding-left:20px; "
-                          >
-                            {{ dashboardSubMenuArr.applicationName }}
-                          </a>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
+                        <li
+                          *ngFor="
+                            let dashboardSubMenuArr of dashboardMenuArr.subchild
+                          "
+                        >
+                          <div class="third-level-menu1">
+                            <a
+                              target="_blank"
+                              href="{{ dashboardSubMenuArr.url }}"
+                              *ngIf="dashboardSubMenuArr.applicationName"
+                              class="referrenceOnHover"
+                              style="padding-left:20px;padding-top: 2px"
+                            >
+                              {{ dashboardSubMenuArr.applicationName }}
+                            </a>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </div>
                 </ul>
-                <span *ngIf="j <= sep">
-                <label *ngIf="dashboardMenu.child!=null">
+                <!-- <span *ngIf="j <= sep">
+                  <label *ngIf="dashboardMenu.child != null">
                     |
-                </label>
-
-                <label *ngIf="dashboardMenu.child==null" >
-                  |
-              </label>
-                </span>
+                  </label>
+                  <label *ngIf="dashboardMenu.child == null">
+                    |
+                  </label>
+                </span> -->
               </li>
             </ul>
           </div>
