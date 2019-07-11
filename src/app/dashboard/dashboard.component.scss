@@ -2,11 +2,6 @@
   padding: 0%;
 }
 
-.difuzeTitle {
-  font-size: 20px;
-  font-weight: 700;
-}
-
 .mainmenu a,
 .navbar-default .navbar-nav > li > a,
 .mainmenu ul li a,
@@ -16,7 +11,7 @@
   padding: 9px 9px 0px 0px;
   font-family: "Roboto", sans-serif;
   display: block !important;
-  font-weight: 560;
+  font-weight: 550;
 }
 
 .mainmenu .active a,
@@ -34,36 +29,29 @@
 .top-level-menu {
   list-style: none;
   padding-left: 2px;
-  margin-top: 4px;
-  margin-bottom: 0px
+  margin-top: 1px;
+  margin-bottom: 0px;
 }
 
 .top-level-menu > li {
   position: relative;
   float: left;
-  font-weight: 500;
   padding-left: 15px;
 }
 
 .top-level-menu li:hover > ul {
-  /* On hover, display the next level's menu */
   display: inline-block;
 }
 
-/* Menu Link Styles */
-
-.top-level-menu a /* Apply to all links inside the multi-level menu */
-{
+.top-level-menu a {
   text-decoration: none;
   padding: 0 0 0 0px;
-
-  /* Make the link cover the entire list item-container */
   display: inline-block;
 }
 
 .second-level-menu {
   position: absolute;
-  top: 33px;
+  top: 30px;
   left: 15px;
   width: 200px;
   list-style: none;
@@ -73,17 +61,13 @@
   border: 1px solid #d0d0d0;
   border-radius: 5px;
   background-color: white;
-  padding-bottom: 6px;
-  padding-top: 6px;
+  padding-bottom: 4px;
+  padding-top: 4px;
 }
 
 .second-level-menu > li {
   position: relative;
-  height: 35px;
   background: white;
-  padding-bottom: 6px;
-  padding-top: 6px;
-  font-weight: 500;
   border-radius: 5px;
 }
 
@@ -92,12 +76,12 @@
 }
 
 .referrenceOnHoverTopMenu {
-  color: gray ;
+  color: gray !important;
 }
 
 .referrenceOnHoverTopMenu:hover {
   height: 25px;
-  color: black;
+  color: #212529 !important;
 }
 
 .referrenceOnHover {
@@ -107,7 +91,7 @@
 .referrenceOnHover:hover {
   background: #eee;
   height: 21px;
-  color: black;
+  color: #212529 !important;
 }
 
 .third-level-menu {
@@ -122,15 +106,14 @@
   border: 1px solid #d0d0d0;
   border-radius: 5px;
   background-color: white;
+  padding-bottom: 4px;
+  padding-top: 4px;
 }
 
 .third-level-menu > li {
   position: relative;
-  height: 25px;
   background: white;
-  font-weight: 500;
   border-radius: 5px;
-  padding-top: 2px;
 }
 
 .third-level-menu1 {

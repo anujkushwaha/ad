@@ -77,6 +77,13 @@ export class DashboardComponent implements OnInit {
               if (this.permissions.includes(x.Permission)) {
                 x.Visible = "true";
                 schild.Visible = "true";
+                if(x.subchild.length > 0){
+                  x.subchild.forEach((y: any) =>{
+                    if(this.permissions.some(a=> y.Permission.includes(a))){
+                    y.Visible = "true";               
+                    }
+                  })
+                }
               }
             });
           }
